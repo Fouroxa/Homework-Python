@@ -1,0 +1,9 @@
+text = "hello word of word"
+dict_text = {}
+for i in text:
+    dict_text[i] = text.count(i)
+print(dict_text)
+dict_text = {}
+for j in text.split():
+    dict_text[j] = text.count(j)
+print(dict_text)
