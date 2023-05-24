@@ -1,23 +1,18 @@
 def my_max(*args):
     compare = None
-    for argument in args:
-        if type(argument) is list:
+    if len(args) == 1:
+        for argument in args:
             for nums in argument:
                 compare = argument[0]
-                if compare < nums:
-                    compare = nums
-            return compare
-        elif type(argument) is str:
-            compare = argument[0]
-            for letters in argument:
-                if compare > letters:
-                    compare = letters
-            return compare
-        else:
+            if compare < nums:
+                compare = nums
+        return compare
+    else:
+        for nums in args:
             compare = args[0]
-            if compare < argument:
-                compare = argument
-    return compare
+        if compare < nums:
+                compare = nums
+        return compare
 
 
-print(my_max([3,3,1]))
+print(my_max(1,2))
