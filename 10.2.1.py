@@ -2,7 +2,7 @@ list_names = []
 def get_student_names(student_names):
     for names in student_names.values():
         list_names.append(names)
-        list_names.sort()
+    list_names.sort()
     return list_names
 
 
